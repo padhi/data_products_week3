@@ -1,0 +1,45 @@
+---
+title: "Week 3 Assignment"
+author: "Ayuta Padhi"
+date: "5/22/2017"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+## Developing Data Products
+
+
+
+###Goal :
+
+ - Create a web page presentation using R Markdown
+ 
+ - Add a plot creating using Plotly
+ 
+
+## Diamonds at a glance
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE,fig.align='center', fig.cap='Diamonds Dataset'}
+library(plotly, warn.conflicts = FALSE)
+
+```
+
+```{r, warning=FALSE,error=FALSE,message=FALSE}
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+plot_ly(d, x = ~carat, y = ~price, color = ~carat,
+        size = ~carat, text = ~paste("Clarity: ", clarity))
+```
+
+
+## 
+
+###  More coming soon...
+
+###                         Thank You
